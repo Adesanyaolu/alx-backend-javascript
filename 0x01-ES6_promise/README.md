@@ -1,6 +1,6 @@
-# 0x00. ES6 Basics
+# 0x01. ES6 Promises
 
-![](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2019/12/08806026ef621f900121.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230123%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230123T121311Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=47e6ee89837afd4b3b0fdf18c39fd992103532d1cf2a77744c93222a7de5d4f1)
+![](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2019/12/75862d67ca51a042003c.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230124%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230124T162628Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=0213d9ede63b4efcb8d173fd945447608f16d46261f3df91458e3e318e1c1c6c)
 
 ## Setup
 ### Install NodeJS 12.11.x
@@ -27,7 +27,7 @@ in your project directory:
 
 ## Configuration files
 **`package.json`**
-```sh
+```json
 {
   "scripts": {
     "lint": "./node_modules/.bin/eslint",
@@ -49,7 +49,7 @@ in your project directory:
 }
 ```
 **`babel.config.js`**
-```sh
+```js
 module.exports = {
   presets: [
     [
@@ -63,8 +63,26 @@ module.exports = {
   ],
 }
 ```
+**`utlis.js`**
+Use when you get to tasks requiring `uploadPhoto` and `createUser`.
+```js
+export function uploadPhoto() {
+  return Promise.resolve({
+    status: 200,
+    body: 'photo-profile-1',
+  });
+}
+
+
+export function createUser() {
+  return Promise.resolve({
+    firstName: 'Guillaume',
+    lastName: 'Salva',
+  });
+}
+```
 **`.eslintrc.js`**
-```sh
+```js
 module.exports = {
   env: {
     browser: false,
