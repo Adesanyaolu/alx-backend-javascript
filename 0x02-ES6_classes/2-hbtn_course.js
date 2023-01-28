@@ -1,58 +1,35 @@
-class HolbertonCourse {
-    constructor(name, length, students) {
-        if (typeof name !== 'string' || typeof length !== 'number' || !Array.isArray(students)) {
-            throw new Error('Invalid input');
-        }
-        this._name = name;
-        this._length = length;
-        this._students = students;
-    }
+export default class HolbertonCourse {
+  constructor(name, length, students) {
+    this.name = name;
+    this.length = length;
+    this.students = students;
+  }
 
-    get name() {
-        return this._name;
-    }
+  get name() {
+    return this._name;
+  }
 
-    set name(newName) {
-        if (typeof newName !== 'string') {
-            throw new Error('Invalid input');
-        }
-        this._name = newName;
-    }
+  set name(val) {
+    if (typeof val !== 'string') throw new TypeError('Name must be a string');
+    this._name = val;
+  }
 
-    get length() {
-        return this._length;
-    }
+  get length() {
+    return this._length;
+  }
 
-    set length(newLength) {
-        if (typeof newLength !== 'number') {
-            throw new Error('Invalid input');
-        }
-        this._length = newLength;
-    }
+  set length(val) {
+    if (typeof val !== 'number') throw new TypeError('Length must be a number');
+    this._length = val;
+  }
 
-    get students() {
-        return this._students;
-    }
+  get students() {
+    return this._students;
+  }
 
-    set students(newStudents) {
-        if (!Array.isArray(newStudents)) {
-            throw new Error('Invalid input');
-        }
-        this._students = newStudents;
-    }
+  set students(val) {
+    if (!(val instanceof Array)) throw new TypeError('Students must be an array of strings');
+    if (!val.every((student) => typeof student === 'string')) throw new TypeError('Students must be an array of strings');
+    this._students = val;
+  }
 }
-
-const course = new HolbertonCourse('Web Development', 8, ['John','Mike','Emily']);
-console.log(course.name); // Output: 'Web Development'
-console.log(course.length); // Output: 8
-console.log(course.students); // Output: ['John','Mike','Emily']
-
-course.name = 'Data Science';
-console.log(course.name); // Output: 'Data Science'
-
-course.length = 10;
-console.log(course.length); // Output: 10
-
-course.students = ['Paul', 'David', 'Amy'];
-console.log(course.students); // Output: ['Paul', 'David', 'Amy']
-
