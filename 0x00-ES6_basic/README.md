@@ -1,6 +1,4 @@
-# 0x00. ES6 Basics
-
-![](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2019/12/08806026ef621f900121.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230123%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230123T121311Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=47e6ee89837afd4b3b0fdf18c39fd992103532d1cf2a77744c93222a7de5d4f1)
+# 0x00. Ex00. ES6 Basics
 
 ## Setup
 ### Install NodeJS 12.11.x
