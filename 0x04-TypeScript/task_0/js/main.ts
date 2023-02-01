@@ -52,5 +52,18 @@ for (var i = 0; i < studentsList.length; i++) {
     row.appendChild(locationCell);
 }
 
-// add the table to the page
-document.body.appendChild(table);
+// document.body.append(table);
+
+
+// console.log(table)
+
+// console.log("Hello World")
+
+// let sample: string = "Hello World";
+
+// console.log (sample);
+
+const hi = document.createElement('p');
+hi.innerHTML = "Hello World";
+document.body.append(hi);
+console.log(hi);

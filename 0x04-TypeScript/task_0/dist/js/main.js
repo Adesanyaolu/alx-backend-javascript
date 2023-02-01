@@ -38,7 +38,13 @@ for (var i = 0; i < studentsList.length; i++) {
     locationCell.innerHTML = student.location;
     row.appendChild(locationCell);
 }
-// add the table to the page
-document.body.appendChild(table);
-
-
+// document.body.append(table);
+// console.log(table)
+// console.log("Hello World")
+// let sample: string = "Hello World";
+// console.log (sample);
+var hi = document.createElement('p');
+hi.innerHTML = "Hello World";
+document.body.append(hi);
+console.log(hi);
+//# sourceMappingURL=main.js.map
